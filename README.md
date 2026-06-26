@@ -1,48 +1,54 @@
 # Ventoy Plugson Launcher
 
-A lightweight GTK3 desktop application for launching Ventoy Plugson on Linux.
+A lightweight GTK3 desktop application that makes launching Ventoy Plugson on Linux quick and simple.
+
+![Ventoy](assets/VentoyLogo.png)
+
+---
 
 ## Features
 
-- Automatically detects Ventoy USB drives
-- Launches Plugson with pkexec
-- Automatically opens Plugson in your web browser
-- Detects an already-running Plugson server
-- Uses the official Ventoy logo
-- Simple GTK3 graphical interface
+- Automatically detects connected Ventoy devices
+- Launches Ventoy Plugson with administrator privileges
+- Automatically opens Plugson in your default web browser
+- Detects an already running Plugson server
+- Simple GTK3 desktop interface
+- Desktop menu integration
+
+---
 
 ## Requirements
 
+- Linux
 - Python 3
 - GTK3 (PyGObject)
-- pkexec (polkit)
-- Ventoy
+- Ventoy 1.0+
 
-## Project Structure
-
-```
-VentoyPlugsonLauncher/
-├── assets/
-│   └── VentoyLogo.png
-├── desktop/
-│   └── ventoy-plugson-launcher.desktop
-├── config.py
-├── drive_detector.py
-├── launcher.py
-├── main.py
-├── run_plugson.sh
-└── README.md
-```
+---
 
 ## Installation
 
-Clone or download the project.
-
-Launch the application with:
+### Run from source
 
 ```bash
 python3 main.py
 ```
+
+### Debian Package
+
+Download the latest `.deb` from the Releases page and install it using your software manager or:
+
+```bash
+sudo apt install ./ventoy-plugson-launcher_1.0.0_amd64.deb
+```
+
+---
+
+## Screenshots
+
+Coming soon.
+
+---
 
 ## License
 
