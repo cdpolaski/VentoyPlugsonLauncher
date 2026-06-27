@@ -5,8 +5,8 @@ Type=Application
 Name=Ventoy Plugson Launcher
 Comment=Launch Ventoy Plugson
 
-Exec=python3 /home/cameron/Utilities/VentoyPlugsonLauncher/main.py
-Icon=/home/cameron/Utilities/VentoyPlugsonLauncher/assets/VentoyLogo.png
+Exec=ventoy-plugson-launcher
+Icon=ventoy-plugson-launcher
 
 Terminal=false
 Categories=Utility;

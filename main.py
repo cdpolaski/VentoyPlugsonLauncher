@@ -4,6 +4,9 @@ import gi
 gi.require_version("Gtk", "3.0")
 
 from gi.repository import Gtk, GdkPixbuf, GLib
+
+Gtk.Window.set_default_icon_name("ventoy-plugson-launcher")
+
 from drive_detector import get_ventoy_drives
 from launcher import launch_plugson
 import os
@@ -42,14 +45,21 @@ class VentoyManager(Gtk.Window):
         # Logo
         # -------------------------
 
+        # -------------------------
+        # Application Icon
+        # -------------------------
+
+        # Use the installed system icon if available
+        self.set_icon_name("ventoy-plugson-launcher")
+
+        # Fall back to the bundled icon while developing
         icon_path = os.path.join(
             os.path.dirname(__file__),
             "assets",
-            "VentoyLogo.png"
+            "ventoy-plugson-launcher.png"
         )
 
         if os.path.exists(icon_path):
-
             self.set_icon_from_file(icon_path)
 
             pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(
@@ -60,7 +70,6 @@ class VentoyManager(Gtk.Window):
             )
 
             image = Gtk.Image.new_from_pixbuf(pixbuf)
-
             grid.attach(image, 0, 0, 1, 2)
 
         # -------------------------
@@ -69,6 +78,9 @@ class VentoyManager(Gtk.Window):
 
         title = Gtk.Label()
 
+        title.set_markup(
+            "<span size='x-large'><b>Ventoy Plugson Launcher</b></span>"
+        )
         title.set_markup(
             "<span size='x-large'><b>Ventoy Plugson Launcher</b></span>"
         )
@@ -129,6 +141,7 @@ class VentoyManager(Gtk.Window):
         self.combo.remove_all()
 
         drives = get_ventoy_drives()
+
 
         if not drives:
 
