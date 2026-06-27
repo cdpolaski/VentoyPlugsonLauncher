@@ -59,7 +59,17 @@ python3 main.py
 
 ## Screenshots
 
-*Coming soon.*
+### Applications Menu
+
+![Applications Menu](screenshots/applications-menu.png)
+
+### Ventoy Plugson Launcher
+
+![Launcher](screenshots/launcher.png)
+
+### Plugson Interface
+
+![Plugson](screenshots/plugson.png)
 
 ---
 
